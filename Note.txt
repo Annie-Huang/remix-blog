@@ -1,0 +1,42 @@
+Remix Crash Course | Fullstack React (https://www.youtube.com/watch?v=d_BhzHVV4aQ)
+
+https://github.com/bradtraversy/remix-blog
+https://github.com/Annie-Huang/remix-blog
+=============================================================================================
+
+PS C:\react> npx create-remix@latest
+Need to install the following packages:
+  create-remix@latest
+Ok to proceed? (y) y
+
+R E M I X
+
+� Welcome to Remix! Let's get you set up with a new project.
+
+? Where would you like to create your app? remix-blog
+? Where do you want to deploy? Choose Remix if you're unsure, it's easy to change deployment targets. Remix App Server
+? TypeScript or JavaScript? JavaScript
+? Do you want me to run `npm install`? Yes
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@npmcli/fs@1.1.0',
+npm WARN EBADENGINE   required: { node: '^12.13.0 || ^14.15.0 || >=16' },
+npm WARN EBADENGINE   current: { node: 'v15.12.0', npm: '7.7.5' }
+npm WARN EBADENGINE }
+
+> postinstall
+> remix setup node
+
+Successfully setup Remix for node.
+
+added 430 packages, and audited 431 packages in 1m
+
+141 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+� That's it! `cd` into "remix-blog" and check the README for development and deploy instructions!
+PS C:\react>
+
+-----------------------------------------------
+
+PS C:\react\remix-blog> npm run dev
