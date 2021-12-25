@@ -40,3 +40,5 @@ PS C:\react>
 -----------------------------------------------
 
 PS C:\react\remix-blog> npm run dev
+
+When you add <Outlet /> you will see the app/routes/index.jsx file again.
