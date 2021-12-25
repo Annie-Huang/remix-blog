@@ -4,6 +4,18 @@ https://github.com/bradtraversy/remix-blog
 https://github.com/Annie-Huang/remix-blog
 =============================================================================================
 
+What is Remix:
+A fullstack react framework by the creators of React Router
+- Server-Side Rendered React
+- File System Routing
+- Nested Routes
+- Loaders & Actions (Server Functions)
+- Easy Access To <head> Tags & Document
+- Error Handling / Error Boundary
+- TypeScript & Types
+- Built in Support for Cookies / Sessions
+
+
 PS C:\react> npx create-remix@latest
 Need to install the following packages:
   create-remix@latest
