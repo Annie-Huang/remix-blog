@@ -73,3 +73,6 @@ Will see
       <h1>This is the posts route</h1>
       <h1>New Post</h1>
 
+
+http://localhost:3000/posts
+http://localhost:3000/posts/84325743
