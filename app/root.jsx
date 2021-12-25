@@ -1,7 +1,21 @@
-import { Outlet, LiveReload, Link, Links } from 'remix';
+import { Outlet, LiveReload, Link, Links, Meta } from 'remix';
 import globalStylesUrl from '~/styles/global.css';
 
+// Create <link rel="stylesheet" href="/build/_assets/global-AFIROZCC.css">
 export const links = () => [{ rel: 'stylesheet', href: globalStylesUrl }];
+
+export const meta = () => {
+  const description = 'A cool blog built with Remix';
+  const keywords = 'remix, react, javascript';
+
+  // Create
+  // <meta name="description" content="A cool blog built with Remix">
+  // <meta name="keywords" content="remix, react, javascript">
+  return {
+    description,
+    keywords,
+  };
+};
 
 export default function App() {
   return (
@@ -17,6 +31,10 @@ function Document({ children, title }) {
   return (
     <html lang='en'>
       <head>
+        {/* This first two meta is the same for every html page. */}
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <Meta />
         <Links />
         <title>{title ? title : 'Remix Blog'}</title>
       </head>
