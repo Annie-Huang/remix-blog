@@ -1,4 +1,4 @@
-import { useLoaderData } from 'remix';
+import { Link, useLoaderData } from 'remix';
 
 // Mimic making a api call in server side and get the data from the frontend.
 export const loader = () => {
@@ -21,6 +21,15 @@ const PostItems = () => {
   return (
     <div>
       <h1>Posts</h1>
+      <ul className='posts-list'>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link to={post.id}>
+              <h3>{post.title}</h3>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
