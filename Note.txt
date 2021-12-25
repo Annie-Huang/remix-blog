@@ -58,3 +58,18 @@ When you add <Outlet /> you will see the app/routes/index.jsx file again.
 Add to global style file:
 export const links = () => [{ rel: 'stylesheet', href: globalStylesUrl }];
 <Links />
+
+Nested route will show the parent route content as well.
+routes/posts.jsx:
+    <div>
+      <h1>This is the posts route</h1>
+      <Outlet />
+    </div>
+routes/posts/new.jsx
+    <div>
+      <h1>New Post</h1>
+    </div>
+Will see
+      <h1>This is the posts route</h1>
+      <h1>New Post</h1>
+
