@@ -76,3 +76,10 @@ Will see
 
 http://localhost:3000/posts
 http://localhost:3000/posts/84325743
+
+
+// loader runs in the server, you can see it log in terminal, not chrome devtool
+export const loader = () => {
+  console.log('123');
+  return {};
+};
