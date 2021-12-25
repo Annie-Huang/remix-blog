@@ -1,9 +1,11 @@
-import { Outlet, LiveReload } from 'remix';
+import { Outlet, LiveReload, Link } from 'remix';
 
 export default function App() {
   return (
     <Document>
-      <Outlet />
+      <Layout>
+        <Outlet />
+      </Layout>
     </Document>
   );
 }
@@ -19,5 +21,25 @@ function Document({ children, title }) {
         {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
       </body>
     </html>
+  );
+}
+
+function Layout({ children }) {
+  return (
+    <>
+      <nav className='navbar'>
+        <Link to='/' className='logo'>
+          Remix
+        </Link>
+
+        <ul className='nav'>
+          <li>
+            <Link to='/posts'>Posts</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className='container'>{children}</div>
+    </>
   );
 }
