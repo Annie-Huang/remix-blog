@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from 'remix';
+import { db } from '~/utils/db.server';
 
-// Mimic making a api call in server side and get the data from the frontend.
+/*// Mimic making a api call in server side and get the data from the frontend.
 export const loader = () => {
   // loader runs in the server, you can see it log in terminal, not chrome devtool
   // console.log('123');
@@ -11,6 +12,17 @@ export const loader = () => {
       { id: 2, title: 'Post 2', body: 'This is a test post' },
       { id: 3, title: 'Post 3', body: 'This is a test post' },
     ],
+  };
+  return data;
+};*/
+
+export const loader = async () => {
+  const data = {
+    posts: await db.post.findMany({
+      take: 20,
+      select: { id: true, title: true, createdAt: true },
+      orderBy: { createdAt: 'desc' },
+    }),
   };
   return data;
 };
