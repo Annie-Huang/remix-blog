@@ -1,4 +1,5 @@
 import { Link, redirect } from 'remix';
+import { db } from '~/utils/db.server';
 
 export const action = async ({ request }) => {
   // You can see the action log in terminal, not chrome devtool
@@ -12,9 +13,10 @@ export const action = async ({ request }) => {
   const fields = { title, body };
   // console.log(fields); // prints out: { title: 'fewafew', body: 'fewaf' }
 
-  // TODO - submit to database
+  // submit to database
+  const post = await db.post.create({ data: fields });
 
-  // return redirect('/posts');
+  return redirect(`/posts/${post.id}`);
 };
 
 const NewPost = () => {
