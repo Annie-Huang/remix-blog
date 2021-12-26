@@ -14,7 +14,7 @@ export const action = async ({ request }) => {
 
   // TODO - submit to database
 
-  return redirect('/posts');
+  // return redirect('/posts');
 };
 
 const NewPost = () => {
@@ -44,5 +44,16 @@ const NewPost = () => {
     </>
   );
 };
+
+export function ErrorBoundary({ error }) {
+  console.log(error);
+
+  return (
+    <div>
+      <h1>Error</h1>
+      <p>{error.message}</p>
+    </div>
+  );
+}
 
 export default NewPost;
