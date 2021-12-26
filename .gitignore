@@ -1,5 +1,7 @@
 .idea
 
+/prisma/dev.db
+
 node_modules
 
 /.cache
