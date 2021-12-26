@@ -1,4 +1,10 @@
-import { Link } from 'remix';
+import { Link, redirect } from 'remix';
+
+export const action = () => {
+  // You can see the action log in terminal, not chrome devtool
+  console.log('123');
+  return redirect('/posts');
+};
 
 const NewPost = () => {
   return (
