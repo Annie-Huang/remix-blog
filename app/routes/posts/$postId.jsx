@@ -1,4 +1,4 @@
-import { useParams, useLoaderData } from 'remix';
+import { useParams, useLoaderData, Link } from 'remix';
 import { db } from '~/utils/db.server';
 
 export const loader = async ({ params }) => {
@@ -18,8 +18,15 @@ const Post = () => {
 
   return (
     <div>
-      {/*<h1>Post {params.postId}</h1>*/}
-      <h1>{post.title}</h1>
+      <div className='page-header'>
+        {/*<h1>Post {params.postId}</h1>*/}
+        <h1>{post.title}</h1>
+        <Link to='/posts' className='btn btn-reverse'>
+          Back
+        </Link>
+      </div>
+
+      <div className='page-content'>{post.body}</div>
     </div>
   );
 };
