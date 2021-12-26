@@ -4,6 +4,7 @@ https://github.com/bradtraversy/remix-blog
 https://github.com/Annie-Huang/remix-blog
 
 https://remix.run/docs/en/v1/guides/errors
+https://www.prisma.io/
 =============================================================================================
 
 What is Remix:
@@ -50,6 +51,9 @@ added 430 packages, and audited 431 packages in 1m
 found 0 vulnerabilities
 � That's it! `cd` into "remix-blog" and check the README for development and deploy instructions!
 PS C:\react>
+
+
+PS C:\react\remix-blog> npm i prisma @prisma/client
 
 -----------------------------------------------
 
