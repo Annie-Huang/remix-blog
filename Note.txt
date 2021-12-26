@@ -56,7 +56,7 @@ PS C:\react>
 PS C:\react\remix-blog> npm i prisma @prisma/client
 PS C:\react\remix-blog> npx prisma init --datasource-provider sqlite
 PS C:\react\remix-blog> npx prisma db push
-
+PS C:\react\remix-blog> node prisma/seed
 -----------------------------------------------
 
 PS C:\react\remix-blog> npm run dev
