@@ -2,6 +2,8 @@ Remix Crash Course | Fullstack React (https://www.youtube.com/watch?v=d_BhzHVV4a
 
 https://github.com/bradtraversy/remix-blog
 https://github.com/Annie-Huang/remix-blog
+
+https://remix.run/docs/en/v1/guides/errors
 =============================================================================================
 
 What is Remix:

@@ -1,8 +1,19 @@
 import { Link, redirect } from 'remix';
 
-export const action = () => {
+export const action = async ({ request }) => {
   // You can see the action log in terminal, not chrome devtool
-  console.log('123');
+  // console.log('123');
+
+  const form = await request.formData();
+  // You can see it "log NodeFormData { _fields: { title: [ 'fewaf' ], body: [ 'fewaf' ] } }" in the terminal
+  // console.log(form);
+  const title = form.get('title');
+  const body = form.get('body');
+  const fields = { title, body };
+  // console.log(fields); // prints out: { title: 'fewafew', body: 'fewaf' }
+
+  // TODO - submit to database
+
   return redirect('/posts');
 };
 
