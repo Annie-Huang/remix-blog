@@ -27,6 +27,13 @@ const Post = () => {
       </div>
 
       <div className='page-content'>{post.body}</div>
+
+      <div className='page-footer'>
+        <form action='' method='post'>
+          <input type='hidden' name='_method' value='delete' />
+          <button className='btn btn-delete'>Delete</button>
+        </form>
+      </div>
     </div>
   );
 };
