@@ -43,6 +43,7 @@ const PostItems = () => {
           <li key={post.id}>
             <Link to={post.id}>
               <h3>{post.title}</h3>
+              {new Date(post.createdAt).toLocaleString()}
             </Link>
           </li>
         ))}
