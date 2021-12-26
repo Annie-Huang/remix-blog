@@ -95,3 +95,6 @@ export const loader = () => {
   console.log('123');
   return {};
 };
+
+
+app/utils/db.server.ts: This will enforce the remix to run at server side.
